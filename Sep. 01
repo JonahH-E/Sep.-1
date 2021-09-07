@@ -1,0 +1,17 @@
+# Author:Jonah, Date:09/01/21, Purpose: Calculate ANOVA
+
+# load a library called "dplyr"
+
+library(dplyr)
+
+# Link for the data
+
+ PATH <- "https://raw.githubusercontent.com/guru99-edu/R-Programming/master/poisons.csv
+
+# Read the website data
+
+ df <- read.csv(PATH) %>% select(-X) %>% mutate(poison = factor(poison, ordered = TRUE))
+
+# Check the website data
+
+ glimpse(df)
